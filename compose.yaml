@@ -1,0 +1,15 @@
+# Make sure that .env file exists and contains the correct values
+name: vyukove-materialy
+services:
+  soundboard-api:
+    build: apps/soundboard-api
+    ports:
+      - "3000:3000"
+  
+  soundboard-client:
+    build:
+      context: apps/soundboard-client
+      args:
+        VITE_API_URL: $VITE_API_URL
+    ports:
+      - "3001:80"
