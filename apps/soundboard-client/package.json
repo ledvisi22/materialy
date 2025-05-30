@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docker:build": "docker build -t soundboard-client .",
+    "docker:run": "docker run -d -p 3001:80 soundboard-client"
   },
   "dependencies": {
     "react": "^19.1.0",
