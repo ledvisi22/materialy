@@ -5,6 +5,8 @@ RUN npm install
 
 COPY . .
 
+ARG VITE_API_URL=http://localhost:3000
+
 RUN npm run build
 
 FROM nginx:alpine AS serve
