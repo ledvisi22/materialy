@@ -1,3 +1,8 @@
+# Local run
+Node v24
+`npm install`
+`npm run dev`
+
 # Docker
 `docker compose build && docker compose up`
 
