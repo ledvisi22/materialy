@@ -1,0 +1,16 @@
+# Runner is on the same machine as the deployment (shortcut).
+name: Docker build
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - run: git -C ~/materialy pull
+    - run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S docker compose -f ~/materialy/compose.yaml build
+    - run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S docker compose -f ~/materialy/compose.yaml up --detach
+    - run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S cp ~/materialy/nginx.config /etc/nginx/sites-available/default
+    - run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S systemctl restart nginx
