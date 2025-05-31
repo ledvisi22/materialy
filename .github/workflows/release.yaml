@@ -6,20 +6,11 @@ on:
     branches: [ "main" ]
 
 jobs:
-  pull:
-    runs-on: self-hosted
-
-    steps:
-    - run: git -C ~/materialy pull
   build:
     runs-on: self-hosted
-
     steps:
+    - run: git -C ~/materialy pull
     - run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S docker compose -f ~/materialy/compose.yaml build
-  deploy:
-    runs-on: self-hosted
-
-    steps:
     - run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S docker compose -f ~/materialy/compose.yaml up --detach
     - run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S cp ~/materialy/nginx.config /etc/nginx/sites-available/default
     - run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S systemctl restart nginx
