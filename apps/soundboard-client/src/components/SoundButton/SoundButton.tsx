@@ -8,7 +8,10 @@ export const SoundButton = ({ name, url }: SoundButtonProps) => {
     const audioRef = useRef<HTMLAudioElement>(null)
 
     const handleClick = () => {
-        audioRef.current?.play();
+        if (!audioRef.current) return
+
+        audioRef.current.volume = 0.5
+        audioRef.current.play();
     }
 
     return <>
