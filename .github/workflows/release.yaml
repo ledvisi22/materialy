@@ -13,4 +13,4 @@ jobs:
     - run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S docker compose -f ~/materialy/compose.yaml build
     - run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S docker compose -f ~/materialy/compose.yaml up --detach
     - run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S cp ~/materialy/nginx.config /etc/nginx/sites-available/default
-    - run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S systemctl restart nginx
+    - run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S systemctl reload nginx
