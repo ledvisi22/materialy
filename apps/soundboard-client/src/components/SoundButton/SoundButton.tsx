@@ -10,7 +10,7 @@ export const SoundButton = ({ name, url }: SoundButtonProps) => {
     const handleClick = () => {
         if (!audioRef.current) return
 
-        audioRef.current.volume = 0.5
+        audioRef.current.volume = 0.3
         audioRef.current.play();
     }
 
