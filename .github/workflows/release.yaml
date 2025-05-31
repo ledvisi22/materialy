@@ -13,6 +13,7 @@ jobs:
 
     steps:
     - run: cd ~/materialy
+    - run: whoami
     - run: git pull
     - run: sudo docker compose build
     - run: sudo docker compose up --detach
