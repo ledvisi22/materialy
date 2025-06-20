@@ -7,7 +7,7 @@ const port = 3000
 app.use(cors())
 app.use(express.json());
 
-app.get("/", cors(), (_request, response) => {
+app.get('/', cors(), (_request, response) => {
     response.send('Musíš poslat POST request s tělem { "input": "string" }. Maximální délka vstupu je pět znaků.');
 })
 
