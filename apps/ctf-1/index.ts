@@ -8,14 +8,14 @@ app.use(cors())
 app.use(express.json());
 
 app.get('/', cors(), (_request, response) => {
-    response.send('Musíš poslat POST request s tělem { "input": "string" }. Maximální délka vstupu je pět znaků.');
+    response.send('Poslal*a si GET request. Musíš poslat POST request s tělem { "input": "string" }.');
 })
 
 app.post('/', cors(), (request, response) => {
     const input = request.body.input;
 
     if (!input || !input.length) {
-        response.send('Musíš poslat POST request s tělem { "input": "string" }. Maximální délka vstupu je pět znaků.');
+        response.send('Tělo musí být { "input": "string" }. Maximální délka vstupu je pět znaků.');
         return;
     };
 
