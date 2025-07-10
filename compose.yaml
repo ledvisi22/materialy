@@ -1,4 +1,4 @@
-# Make sure that .env file exists and contains the correct values
+# Make sure that .env file exists in the project root and contains the correct values
 name: vyukove-materialy
 services:
   soundboard-api:
@@ -10,7 +10,7 @@ services:
     build:
       context: apps/soundboard-client
       args:
-        VITE_API_URL: $VITE_API_URL
+        SOUNDBOARD_API_URL: $SOUNDBOARD_API_URL
     ports:
       - "3001:80"
 
