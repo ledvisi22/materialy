@@ -3,7 +3,7 @@ import './App.css'
 import type { Sound } from '../../types/types';
 import { SoundButton } from '../SoundButton/SoundButton';
 
-const API_URL = import.meta.env.VITE_API_URL
+const API_URL = import.meta.env.VITE_SOUNDBOARD_API_URL
 const EXAMPLE_AUDIO_URL = `${API_URL}/sounds/discord.mp3`
 
 

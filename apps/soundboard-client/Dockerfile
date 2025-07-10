@@ -5,7 +5,7 @@ RUN npm install
 
 COPY . .
 
-ARG SOUNDBOARD_API_URL
+ARG VITE_SOUNDBOARD_API_URL
 
 RUN npm run build
 

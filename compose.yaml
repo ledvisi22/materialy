@@ -10,7 +10,7 @@ services:
     build:
       context: apps/soundboard-client
       args:
-        SOUNDBOARD_API_URL: $SOUNDBOARD_API_URL
+        VITE_SOUNDBOARD_API_URL: $SOUNDBOARD_API_URL
     ports:
       - "3001:80"
 
