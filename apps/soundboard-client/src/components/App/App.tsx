@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import './App.css'
 import type { Sound } from '../../types/types';
 import { SoundButton } from '../SoundButton/SoundButton';
 
@@ -23,13 +22,19 @@ function App() {
 
   return (
     <>
-      <h1>Soundboard Client</h1>
-      <div className="card">
-        <SoundButton name='Discord' url={EXAMPLE_AUDIO_URL} />
-        <pre>
-          {JSON.stringify(sounds, null, 1)}
-        </pre>
-      </div>
+      <header>
+        <h1>Soundboard Client</h1>
+      </header>
+      <main>
+        <section>
+          <SoundButton name='Discord' url={EXAMPLE_AUDIO_URL} />
+        </section>
+        <section>
+          <pre>
+            {JSON.stringify(sounds, null, 1)}
+          </pre>
+        </section>
+      </main >
     </>
   )
 }

@@ -1,5 +1,4 @@
 import { useRef } from 'react';
-import './SoundButton.css';
 import type { Sound } from '../../types/types';
 
 type SoundButtonProps = Sound
