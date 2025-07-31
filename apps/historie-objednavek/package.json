@@ -1,0 +1,12 @@
+{
+  "name": "historie-objednavek",
+  "version": "1.0.0",
+  "description": "Historie objednávek na Woltu",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "scripts": {
+    "docker:build": "docker build -t historie-objednavek .",
+    "docker:run": "docker run -d -p 3003:80 historie-objednavek"
+  }
+}
