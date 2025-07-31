@@ -18,3 +18,8 @@ services:
     build: apps/ctf-1
     ports:
       - "3002:3000"
+  
+  ctf-1:
+    build: apps/historie-objednavek
+    ports:
+      - "3003:80"
