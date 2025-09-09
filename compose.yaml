@@ -23,3 +23,9 @@ services:
     build: apps/historie-objednavek
     ports:
       - "3003:80"
+
+  score-counter-api:
+    build:
+      context: apps/score-counter-api
+    ports:
+      - "3004:3000"
