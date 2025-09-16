@@ -46,5 +46,5 @@ app.post("/", cors(), (_req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`soundboard-api running on port ${port}`)
+    console.log(`score-counter-api running on port ${port}`)
 })
