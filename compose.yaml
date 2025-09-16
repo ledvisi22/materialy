@@ -29,3 +29,9 @@ services:
       context: apps/score-counter-api
     ports:
       - "3004:3000"
+
+  stock-price-api:
+    build:
+      context: apps/stock-price-api
+    ports:
+      - "3005:3000"
