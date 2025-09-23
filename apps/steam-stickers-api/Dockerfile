@@ -7,7 +7,7 @@ RUN npm install
 
 COPY . .
 
-ARG STEAM_STICKERS_API_CACHE_PATH
+ENV STEAM_STICKERS_API_CACHE_PATH=/mnt/steam-stickers-cache
 
 CMD ["node", "index.ts"]
 EXPOSE 3000
