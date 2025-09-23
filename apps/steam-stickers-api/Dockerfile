@@ -9,5 +9,5 @@ COPY . .
 
 ARG STEAM_STICKERS_API_CACHE_PATH
 
-CMD ["node", "--env-file=.env", "index.ts"]
+CMD ["node", "index.ts"]
 EXPOSE 3000
